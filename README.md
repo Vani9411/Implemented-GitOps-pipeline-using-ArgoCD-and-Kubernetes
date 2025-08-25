@@ -1,5 +1,6 @@
 🎮 Deploy Tetris Game on Kubernetes using Argo CD
 
+
 In this project, I demonstrate step by step how I deployed a Tetris game on Kubernetes using GitOps with Argo CD.
 
 
@@ -211,4 +212,5 @@ Managing deployments through Git commits
 Observing automated synchronization in action
 
 Understanding rollback and self-healing in Kubernetes
+
 
