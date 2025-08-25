@@ -9,54 +9,54 @@ In this project, I demonstrate step by step how I deployed a Tetris game on Kube
 
 🛠 Prerequisites
 
-Before starting, I made sure I had:
+ Before starting, I made sure I had:
 
-A running Kubernetes cluster (Minikube, Kind, or a managed cluster)
+ A running Kubernetes cluster (Minikube, Kind, or a managed cluster)
 
-kubectl installed and configured
+ kubectl installed and configured
 
-Argo CD installed in the cluster
+ Argo CD installed in the cluster
 
-A Git repository containing the Kubernetes manifests for the Tetris game
+ A Git repository containing the Kubernetes manifests for the Tetris game
 
-Basic understanding of GitOps concepts
+ Basic understanding of GitOps concepts
 
-Browser access to check the game once deployed
+ Browser access to check the game once deployed
 
 
 
----
+----
 
 🚀 Step 1: Install Argo CD
 
-1. I created a dedicated namespace for Argo CD.
+ 1. I created a dedicated namespace for Argo CD.
 
 
-2. Installed Argo CD using the official manifests.
+ 2. Installed Argo CD using the official manifests.
 
 
-3. Exposed the Argo CD server and logged in with the initial admin credentials.
+ 3. Exposed the Argo CD server and logged in with the initial admin credentials.
 
 
-4. Opened the Argo CD dashboard in my browser.
+ 4. Opened the Argo CD dashboard in my browser.
 
 
 
 
----
+----
 
 🎮 Step 2: Prepare the Tetris Application
 
-1. I used a pre-built container image of the Tetris game.
+ 1. I used a pre-built container image of the Tetris game.
 
 
-2. Created Kubernetes manifests.
+ 2. Created Kubernetes manifests.
 
 
-3. Pushed these manifests into my Git repository under a folder named manifests/.
+ 3. Pushed these manifests into my Git repository under a folder named manifests/.
 
 
-4. Ensured the repository was accessible to Argo CD.
+ 4. Ensured the repository was accessible to Argo CD.
 
 
 5. Validated manifests locally before pushing them.
@@ -64,20 +64,20 @@ Browser access to check the game once deployed
 
 
 
----
+----
 
 🔗 Step 3: Connect Repository to Argo CD
 
-1. I logged in to the Argo CD dashboard.
+ 1. I logged in to the Argo CD dashboard.
 
 
-2. Added my Git repository containing the Tetris manifests.
+ 2. Added my Git repository containing the Tetris manifests.
 
 
-3. Verified that Argo CD could read the manifests successfully.
+ 3. Verified that Argo CD could read the manifests successfully.
 
 
-4. Confirmed connectivity and repository health inside Argo CD.
+ 4. Confirmed connectivity and repository health inside Argo CD.
 
 
 
@@ -86,24 +86,24 @@ Browser access to check the game once deployed
 
 📦 Step 4: Create Argo CD Application
 
-1. I created a new application in Argo CD.
+ 1. I created a new application in Argo CD.
 
 
-2. Set the repository URL and the path to the manifests.
+ 2. Set the repository URL and the path to the manifests.
 
 
-3. Specified the destination namespace and Kubernetes cluster.
+ 3. Specified the destination namespace and Kubernetes cluster.
 
 
-4. Enabled automated sync with self-heal and prune options.
+ 4. Enabled automated sync with self-heal and prune options.
 
 
-5. Saved and verified the application definition.
+ 5. Saved and verified the application definition.
 
 
 
 
----
+----
 
 ✅ Step 5: Deploy the Tetris Game
 
@@ -213,6 +213,7 @@ Managing deployments through Git commits
 Observing automated synchronization in action
 
 Understanding rollback and self-healing in Kubernetes
+
 
 
 
